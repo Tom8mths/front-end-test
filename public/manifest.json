@@ -1,0 +1,21 @@
+{
+  "name": "Shop - Buy awesome things",
+  "short_name": "Shop",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#367d98",
+  "description": "TODO: A awesome description!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#367d98"
+}

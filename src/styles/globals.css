@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body {
+  @apply bg-white;
+}
+
+.headerBackground {
+  background: linear-gradient(90deg, #e6c5d9 0%, #367c98 100%);
+}
+
+@media only screen and (min-width: 1024px) {
+  .headerBackground {
+    background-image: conic-gradient(from 180deg, #e6c5d9, #859db5 , #367c98);
+  }
+}
