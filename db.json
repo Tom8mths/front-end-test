@@ -3,26 +3,29 @@
     {
       "id": 1,
       "title": "Upholstered Dining Chair - Dark Green",
-      "price": 96.00,
+      "price": 96.99,
       "description": "Add a touch of modern style and comfort to your dining area with this 4-Piece Copley Upholstered Dining Chair Set from Project 62™. This set of four dining chairs features a comfortable upholstered seat perched atop slightly outward angled legs, and it boasts an armless silhouette to deliver a comfortable seating experience that's easy to slide in and out of at the table. Bring even more eye-catching appeal to your home's aesthetic by positioning these chairs around your square or round dining table to complete a cohesive look.",
       "category": "Dining room",
-      "image": "/img/green-chair.png"
+      "image": "/img/green-chair.png",
+      "stockQty": 60
     },
     {
       "id": 2,
       "title": "Euna 5 Light Adjustable Cord Edison Lamp Golden",
-      "price": 960.00,
+      "price": 960.99,
       "description": "Brighten up your industrial interior with the Euna Edison ceiling lamp. The antique black finished metal fixtures are paired with clear glass shades for a bright glow. Adjustable hanging cords allow you to customize the look to suit your unique space.",
       "category": "Dining room",
-      "image": "/img/lamp.png"
+      "image": "/img/lamp.png",
+      "stockQty": 45
     },
     {
       "id": 3,
       "title": "Writing Desk with Drawers - Room Essentials",
-      "price": 91.00,
+      "price": 91.99,
       "description": "Add a touch of elegance to your workspace with this Writing Desk with Drawers from Room Essentials™. Showcasing a wooden construction, this rectangle writing desk comes complete with a built-in drawer and an open shelf to offer plenty of room for storing your files and other workspace essentials. The tabletop features ample room for writing or working on a laptop, along with space for placing a lamp, pen holder and other must-have desk accessories. Designed in a solid color for versatile styling, this wooden writing desk blends seamlessly with your existing decor style.",
       "category": "Room Essentials",
-      "image": "/img/office-desk.png"
+      "image": "/img/office-desk.png",
+      "stockQty": 32
     },
     {
       "id": 4,
@@ -30,15 +33,17 @@
       "price": 959.99,
       "description": "Command the room with furniture that grabs the eye with unique, functional, mid-century design. Created by Christian Rudolph, the Rhodes Tufted Sofa uses retro throwbacks to direct the details in the design, found in the tufted buttons and exposed top stitching. Deep seating and curved arms make this piece as comfortable as it is beautiful.",
       "category": "Living room",
-      "image": "/img/sofa-gray.png"
+      "image": "/img/sofa-gray.png",
+      "stockQty": 13
     },
     {
       "id": 5,
       "title": "Futon Sofa with Arms",
-      "price": 240.00,
+      "price": 249.99,
       "description": "With this Futon Sofa with Arms from Room Essentials™, you'll have comfy and convenient sitting that doubles as a flexible option for naps or hosting a guest overnight. Designed in a solid gray with tapered legs for a simple and sleek look, this futon sofa comes with a cushioned seat and back to help you relax in comfort. This futon sofa features click-clack technology, making it easy to convert into a bed. Whether you're enjoying a refreshing drink and chatting with friends or family, or you're curling up with a good book to read alone, this upholstered futon sofa will create a comfy spot for convenient and flexible seating in your home.",
       "category": "Dining room",
-      "image": "/img/sofa.png"
+      "image": "/img/sofa.png",
+      "stockQty": 22
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "price": 350.99,
       "description": "The Christopher Knight Home Malone Bonded Leather Club Chair features studs, tufting, and even carved wood legs that denote only the finest in elegance. This traditional club chair will look great as an addition to your office or as an extra chair in your living room or den. This chair will add style and comfort to any room you place it in. You can not go wrong with this Christopher Knight Home Malone Bonded Leather Club Chair.",
       "category": "Dining room",
-      "image": "/img/white-chair.png"
+      "image": "/img/white-chair.png",
+      "stockQty": 132
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "price": 529.99,
       "description": "Add a touch of modern style and comfort to your dining area with this 4-Piece Copley Upholstered Dining Chair Set from Project 62™. This set of four dining chairs features a comfortable upholstered seat perched atop slightly outward angled legs, and it boasts an armless silhouette to deliver a comfortable seating experience that's easy to slide in and out of at the table. Bring even more eye-catching appeal to your home's aesthetic by positioning these chairs around your square or round dining table to complete a cohesive look.",
       "category": "Dining room",
-      "image": "/img/wood-shelf.png"
+      "image": "/img/wood-shelf.png",
+      "stockQty": 0
     }
   ]
 }

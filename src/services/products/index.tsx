@@ -7,10 +7,11 @@ type HttpGetProductsResponse = {
   description: string;
   category: string;
   image: string;
+  stockQty: number;
 };
 
 export async function httpGetProducts(api: AxiosInstance) {
-  const {data} = await api.get<HttpGetProductsResponse[]>(`/products`);
+  const {data} = await api.get<HttpGetProductsResponse[]>('/products');
 
   return data;
 }

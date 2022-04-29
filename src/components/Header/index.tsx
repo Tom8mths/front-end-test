@@ -58,8 +58,6 @@ export default function Header({user}: HeaderProps) {
       </div>
 
       <Navigation isOpen={isOpen} onClose={toggleMenu} user={user}></Navigation>
-
-      <MiniCart isOpen={isMiniCartOpen} />
     </div>
   );
 }

@@ -1,11 +1,19 @@
-import ProductTemplate, {
-  ProductTemplateProps,
-} from '../../../templates/Product';
-import {useRouter} from 'next/router';
+import ProductTemplate from '../../../templates/Product';
 
-export default function Product() {
-  const router = useRouter();
+import {httpGetProductDetails} from '../../../services/productDetail';
+import {GetServerSidePropsContext} from 'next';
 
-  console.log('router', router);
-  return <ProductTemplate />;
+export default function Product({product}) {
+  return <ProductTemplate product={product} />;
+}
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const id = String(ctx.params?.id);
+
+  const product = await httpGetProductDetails(id);
+  return {
+    props: {
+      product,
+    },
+  };
 }

@@ -3,7 +3,7 @@ import * as S from './styles';
 export type TextProps = {
   children: string | React.ReactNode;
   size?: 'xsmall' | 'small' | 'base' | 'large' | 'xlarge';
-  color?: 'white' | 'lightGray' | 'black';
+  color?: 'white' | 'lightGray' | 'black' | 'primary';
   className?: string;
 };
 

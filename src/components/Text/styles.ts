@@ -11,6 +11,7 @@ export const sizeModiffiers = {
 };
 
 export const colorModiffiers = {
+  primary: 'text-[#6891aa]',
   white: 'text-white',
   black: 'text-black',
   lightGray: 'text-neutral-400',

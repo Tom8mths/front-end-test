@@ -17,3 +17,11 @@ body {
     background-image: conic-gradient(from 180deg, #e6c5d9, #859db5 , #367c98);
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  right: 0;
+}

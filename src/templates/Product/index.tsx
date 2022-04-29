@@ -3,36 +3,39 @@ import Heading from '../../components/Heading';
 import Text from '../../components/Text';
 import Base from '../Base';
 
-export default function Product() {
+export type ProductTemplateProps = {
+  product: object;
+};
+
+export default function Product({product}) {
   return (
     <>
       <Base hasSidebar={false} paddingTop={false}>
-        <div className="flex items-start justify-between h-screen-menu w-full mt-20 mb-10 py-2">
-          <div className="hidden md:block">
+        <div className="block lg:flex items-start justify-between h-screen-menu w-full mt-20 mb-10 py-2">
+          <div>
             <img
-              className="bg-white/30 rounded rounded-[25px] w-80 "
-              src="/img/icon-512.png"
+              className="bg-white/30 rounded m-auto rounded-[25px] mb-20 w-80 "
+              src={product.image}
               alt=""
             />
           </div>
           <main className="flex md:w-[27rem] flex-col">
             <Heading size="medium" weight="normal">
-              Chair
+              {product.title}
             </Heading>
-            <Text className="mt-10 text-white/60">
-              Shop was created for the new ways we live and work. We make
-              beatifully designed, sustainable furniture around the world
-            </Text>
+            <Text className="mt-10 text-white/60">{product.description}</Text>
             <Text className="text-[#fd927d] mb-2" size="large">
-              $4.150,00
+              ${product.price}
             </Text>
             <span className="mt-10 inline-flex justify-start">
-              <select name="cars" className="w-20 h-10 px-2" id="cars">
-                <option value="volvo">1</option>
-                <option value="saab">2</option>
-                <option value="mercedes">3</option>
-                <option value="audi">4</option>
-              </select>
+              <input
+                type="number"
+                name="quantity"
+                min={0}
+                max={product.stockQty}
+                className="w-20 h-10 px-2"
+              />
+
               <Button color="secondary" className="ml-10">
                 Add to cart
               </Button>

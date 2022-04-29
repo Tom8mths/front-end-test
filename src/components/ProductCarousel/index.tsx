@@ -3,37 +3,49 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ProductCard from '../ProductCard';
+import {Navigation, A11y} from 'swiper';
 
-type ProductCarouselProps = {
-  products?: Array;
-};
+export default function ProductCarousel({items}) {
+  const {products} = items;
 
-export default function ProductCarousel({products}: ProductCarouselProps) {
   return (
     <Swiper
-      spaceBetween={20}
-      slidesPerView={3}
-      navigation
-      pagination={{clickable: true}}
+      spaceBetween={30}
+      modules={[Navigation, A11y]}
+      navigation={{
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      }}
+      autoplay={true}
+      breakpoints={{
+        640: {
+          width: 640,
+          slidesPerView: 2,
+        },
+        768: {
+          width: 768,
+          slidesPerView: 2,
+        },
+        1024: {
+          width: 1024,
+          slidesPerView: 3,
+        },
+        1440: {
+          width: 1440,
+          slidesPerView: 4,
+        },
+      }}
     >
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard></ProductCard>
-      </SwiperSlide>
+      {products &&
+        products.map((item, i) => {
+          return (
+            <SwiperSlide key={i}>
+              <ProductCard item={item}></ProductCard>
+            </SwiperSlide>
+          );
+        })}
+      <button className="swiper-button-prev"></button>
+      <button className="swiper-button-next"></button>
     </Swiper>
   );
 }

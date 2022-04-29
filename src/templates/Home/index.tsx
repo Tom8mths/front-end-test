@@ -4,14 +4,11 @@ import Heading from '../../components/Heading';
 import ProductCarousel from '../../components/ProductCarousel';
 import Text from '../../components/Text';
 import Base from '../Base';
-import {httpGetProducts} from '../../services/products';
-import {setupAPIClient} from '../../services/api';
 
-export default async function Home() {
-  const api = setupAPIClient(ctx);
-  const products = await httpGetProducts(api);
-
-  console.log('aa', products);
+export default function Home({products}) {
+  const cheapestItem = products.products.reduce(function (prev, curr) {
+    return prev.price < curr.price ? prev : curr;
+  });
 
   return (
     <>
@@ -43,13 +40,15 @@ export default async function Home() {
             </span>
           </main>
           <div className="hidden md:block">
-            <img
-              className="bg-white/30 rounded rounded-t-[25px] w-64 "
-              src="/img/icon-512.png"
-              alt=""
-            />
+            <a className="cursor-pointer" href={`/product/${cheapestItem.id}`}>
+              <img
+                className="bg-white/30 rounded rounded-t-[25px] w-64 "
+                src={cheapestItem.image}
+                alt={cheapestItem.title}
+              />
+            </a>
             <div className="w-65 h-20 mt-10 bg-white/30 rounded-b-[25px] flex justify-center items-center font-bold text-gray-600">
-              20% off on Chair Catalogue
+              Cheapest item in our catalogue!
             </div>
           </div>
         </div>
@@ -65,7 +64,7 @@ export default async function Home() {
           </div>
         </Container>
       </section>
-      <section className="bg-[#eff4f6] px-20 pb-20">
+      <section className="bg-[#eff4f6] pb-20">
         <Container>
           <div className="block md:flex items-center justify-between py-20 ">
             <Text className="text-[#367c98] font-bold" size="xlarge">
@@ -78,7 +77,7 @@ export default async function Home() {
               regards to furnishing
             </p>
           </div>
-          <ProductCarousel />
+          <ProductCarousel items={products} />
         </Container>
       </section>
     </>

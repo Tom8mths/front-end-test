@@ -4,6 +4,7 @@ import {User} from '../../interfaces/user.interface';
 
 import Container from '../../components/Container';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export type BaseProps = {
   user?: User;
